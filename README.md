@@ -35,5 +35,5 @@ Open <http://myapp.local:8888>.
 It's convenient to forward port 80 to 8888 so that we can access this with just <http://myapp.local>; on macOS 10.12+ run:
 
 ```
-echo "rdr pass inet proto tcp from any to any port 80 -> 127.0.0.1 port #{port}" | sudo pfctl -ef -
+echo "rdr pass inet proto tcp from any to any port 80 -> 127.0.0.1 port 8888" | sudo pfctl -ef -
 ```
